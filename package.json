@@ -40,7 +40,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
+      "src/web/app/**/*.{js,jsx}",
       "!**/node_modules/**",
       "!build/**"
     ],
@@ -48,7 +48,6 @@
       "lcov",
       "text"
     ],
-
     "coverageThreshold": {
       "global": {
         "statements": 100,
