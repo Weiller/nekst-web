@@ -49,6 +49,7 @@ jobs:
     working_directory: ~/cicd-circleci
 
     steps:
+      - checkou
 
       - run:
           name: Install Sonar Client
