@@ -42,26 +42,26 @@ jobs:
             - coverage
           key: v1-coverage
 
-   update_analysis:
+    update_analysis:
 
-     - run:
-         name: Install Sonar Client
-         command: |
-           wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
-           unzip sonar-scanner-cli-3.2.0.1227-linux.zip
-           export SONAR_SCANNER_OPTS="-Xmx2048m"
+      - run:
+          name: Install Sonar Client
+          command: |
+            wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
+            unzip sonar-scanner-cli-3.2.0.1227-linux.zip
+            export SONAR_SCANNER_OPTS="-Xmx2048m"
 
-     - run:
-         name: Update Sonar
-         command: |
-           eval ./sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner   -Dsonar.projectKey=nekst-web \
-                                                                                -Dsonar.organization=weiller-github \
-                                                                                -Dsonar.sources=./src/web/app \
-                                                                                -Dsonar.test.inclusions=src/**/*.spec.js,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx \
-                                                                                -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info \
-                                                                                -Dsonar.binaries=build/classes \
-                                                                                -Dsonar.host.url=https://sonarcloud.io
-                                                                                -Dsonar.login=969bd71056e6d5f5b04efd964cc79171e591a60f
+      - run:
+          name: Update Sonar
+          command: |
+            eval ./sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner   -Dsonar.projectKey=nekst-web \
+                                                                                 -Dsonar.organization=weiller-github \
+                                                                                 -Dsonar.sources=./src/web/app \
+                                                                                 -Dsonar.test.inclusions=src/**/*.spec.js,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx \
+                                                                                 -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info \
+                                                                                 -Dsonar.binaries=build/classes \
+                                                                                 -Dsonar.host.url=https://sonarcloud.io
+                                                                                 -Dsonar.login=969bd71056e6d5f5b04efd964cc79171e591a60f
 
 workflows:
   version: 2
