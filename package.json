@@ -12,25 +12,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
-    "test-junit": "react-scripts test --ci --coverage --testResultsProcessor=jest-junit",
-    "test-coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -38,16 +25,19 @@
     "eslint-plugin-react": "^7.7.0",
     "jest-junit": "^3.6.0"
   },
+
   "jest": {
     "collectCoverageFrom": [
       "src/web/app/**/*.{js,jsx}",
       "!**/node_modules/**",
       "!build/**"
     ],
+
     "coverageReporters": [
       "lcov",
       "text"
     ],
+
     "coverageThreshold": {
       "global": {
         "statements": 100,
@@ -57,6 +47,7 @@
       }
     }
   },
+
   "jest-junit": {
     "output": "test-results/test-report.junit.xml"
   }
