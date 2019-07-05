@@ -52,7 +52,7 @@ jobs:
                                                                                  -Dsonar.sources=./src/web/app \
                                                                                  -Dsonar.test.inclusions=src/**/*.spec.js,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx \
                                                                                  -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info \
-                                                                                 -Dsonar.host.url=https://sonarcloud.io
+                                                                                 -Dsonar.host.url=https://sonarcloud.io \
                                                                                  -Dsonar.login=969bd71056e6d5f5b04efd964cc79171e591a60f
 
 workflows:
