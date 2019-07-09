@@ -5,14 +5,13 @@ const ProductList = () => {
 
     useEffect(() => {
         getProducts()
-    },[])
+    }, [])
 
     const getProducts = () => {
         axios.get('http://localhost:8080/product').then(response => {
             console.log(response)
         })
     }
-
 
     return (
         <div>
