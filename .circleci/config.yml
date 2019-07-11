@@ -35,7 +35,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
 
-      - run: yarn test
+      - run: yarn coverage
 
       - run:
           name: Install Sonar Client

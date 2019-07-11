@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Teste do componente - Page 404 test render 1`] = `
-<div>
-   Página não encontradsa
-</div>
-`;
+exports[`Teste do componente - Page 404 test render 1`] = `ShallowWrapper {}`;
