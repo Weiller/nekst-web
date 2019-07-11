@@ -1,11 +1,14 @@
-import * as React from "react";
+import * as React from 'react'
+import TextField from '@material-ui/core/TextField'
 
-class Product extends React.Component {
+const Product = () => {
 
-    render() {
-       return <div>add</div>
-    }
+    return (
+        <form>
+            <TextField id='name' label='name' margin='normal'/>
+        </form>
+    )
 
 }
 
-export default Product;
+export default Product
