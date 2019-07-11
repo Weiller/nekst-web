@@ -24,15 +24,11 @@
     "axios-mock-adapter": "^1.17.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.7.0",
     "jest-junit": "^3.6.0"
   },
   "jest": {
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ],
     "collectCoverageFrom": [
       "src/web/app/**/*.{js,jsx}",
       "!**/node_modules/**",
