@@ -16,6 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage -u",
+    "coverage:lint": "npm run lint & npm run coverage",
+    "lint": "eslint src/**/**/*.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
