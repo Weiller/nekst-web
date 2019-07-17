@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import App from "../App";
-import Product from "../web/app/product/Product";
-import ProductList from "../web/app/product/ProductList";
-import Page404 from "../web/app/components/page404/Page404";
+import App from '../App'
+import Product from '../web/app/product/Product'
+import ProductList from '../web/app/product/ProductList'
+import Page404 from '../web/app/components/page404/Page404'
 
 const ApplicationRouter = () => {
 

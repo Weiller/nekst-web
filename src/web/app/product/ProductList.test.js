@@ -6,13 +6,11 @@ import MockAdapter from 'axios-mock-adapter'
 
 it('test render', () => {
 
-    const mock = new MockAdapter(axios);
-    mock
-        .onGet("http://localhost:8080/product")
-        .reply(200, {test: 1});
+    const mock = new MockAdapter(axios)
+    mock.onGet('http://localhost:8080/product').reply(200, {test: 1})
 
-    const div = document.createElement('div');
-   ReactDOM.render(<ProductList />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const div = document.createElement('div')
+    ReactDOM.render(<ProductList/>, div)
+    ReactDOM.unmountComponentAtNode(div)
 })
 

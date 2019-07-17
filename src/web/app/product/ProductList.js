@@ -1,23 +1,32 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState, useCallback} from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 
-const ProductList = () => {
+const ProductList = (props) => {
 
-    useEffect(() => {
-        getProducts()
-    }, [])
-
-    const getProducts = () => {
-        axios.get('http://localhost:8080/product').then(response => {
+    const getProducts = useCallback(() => {
+        console.log(props.name)
+        return axios.get('http://localhost:8080/product').then(response => {
             console.log(response)
         })
-    }
+    }, [props.name])
+
+    useEffect(() => {
+        getProducts().then(() => {
+            console.log('a')
+        })
+
+    }, [getProducts])
 
     return (
         <div>
-            <span>a</span>
+            <span>{props.name}</span>
         </div>
     )
+}
+
+ProductList.propTypes = {
+    name: PropTypes.string
 }
 
 export default ProductList
