@@ -6,20 +6,23 @@
     "@material-ui/core": "^4.2.0",
     "axios": "^0.19.0",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "formik": "^1.5.8",
     "prop-types": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "standard": "^13.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage -u",
-    "coverage:lint": "npm run lint & npm run coverage",
+    "coverage:lint": "yarn standard:lint & yarn coverage",
     "lint": "eslint src/**/**/*.js",
+    "standard:lint": "standard --fix",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,6 +57,16 @@
   },
   "jest-junit": {
     "output": "test-results/test-report.junit.xml"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": [
+      "mocha",
+      "jest"
+    ],
+    "ignore": [
+      "src/serviceWorker.js"
+    ]
   },
   "browserslist": {
     "production": [
